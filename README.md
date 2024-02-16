@@ -20,3 +20,12 @@ git commit -m "message"
 ```
 git pull
 ```
+
+```
+python setup.py install
+```
+
+# or add -e . in requirements.txt file and  run : 
+```
+pip install -r requirements.txt
+```
