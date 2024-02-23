@@ -14,6 +14,8 @@ from sklearn.preprocessing import StandardScaler, OrdinalEncoder
 
 from src.DiamondPricePrediction.utils.utils import save_object
 
+os.chdir('/Users/deepjyotibhattacharjee/Developer/Diamond_Price_Prediction')
+
 @dataclass
 class DataTransformationConfig:
     preprocessor_obj_file_path = os.path.join("artifacts","preprocessor.pkl")

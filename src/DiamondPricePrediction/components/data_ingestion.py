@@ -9,12 +9,16 @@ from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 from pathlib import Path
 
+os.chdir('/Users/deepjyotibhattacharjee/Developer/Diamond_Price_Prediction')
+print("cwd == ",os.getcwd())
+
 
 @dataclass
 class DataIngestionConfig:
-    raw_data_path:str = os.path.join("/Users/deepjyotibhattacharjee/Developer/Diamond_Price_Prediction/artifacts","raw.csv")
-    train_data_path:str = os.path.join("/Users/deepjyotibhattacharjee/Developer/Diamond_Price_Prediction/artifacts","train.csv")
-    test_data_path:str = os.path.join("/Users/deepjyotibhattacharjee/Developer/Diamond_Price_Prediction/artifacts","test.csv")
+    # raw_data_path:str = os.path.join("/Users/deepjyotibhattacharjee/Developer/Diamond_Price_Prediction/artifacts","raw.csv")
+    raw_data_path:str = os.path.join("artifacts","raw.csv")
+    train_data_path:str = os.path.join("artifacts","train.csv")
+    test_data_path:str = os.path.join("artifacts","test.csv")
 
 
 class DataIngestion:
@@ -24,12 +28,12 @@ class DataIngestion:
     def initiate_data_ingestion(self):
         logging.info("Data ingestion started.")
         try:
-            data = pd.read_csv(Path(os.path.join("/Users/deepjyotibhattacharjee/Developer/Diamond_Price_Prediction/notebooks/data","gemstone.csv")))
+
+            data = pd.read_csv(Path("notebooks/data","gemstone.csv"))
             logging.info("Read the dataset as a dataframe.")
 
             print(os.path.join(self.ingestion_config.raw_data_path))
 
-            os.makedirs(os.path.dirname(os.path.join(self.ingestion_config.raw_data_path)),exist_ok=True)
             os.makedirs(os.path.dirname(os.path.join(self.ingestion_config.raw_data_path)),exist_ok=True)
             data.to_csv(self.ingestion_config.raw_data_path,index=False)
             logging.info("Saved raw data in artifacts folder")
