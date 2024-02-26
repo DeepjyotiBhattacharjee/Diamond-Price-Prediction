@@ -9,7 +9,7 @@ from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 from pathlib import Path
 
-# os.chdir('/Users/deepjyotibhattacharjee/Developer/Diamond_Price_Prediction')
+os.chdir('/Users/deepjyotibhattacharjee/Developer/Diamond_Price_Prediction')
 print("cwd == ",os.getcwd())
 
 
