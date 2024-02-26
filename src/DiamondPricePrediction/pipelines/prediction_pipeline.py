@@ -5,7 +5,7 @@ from src.DiamondPricePrediction.exception import CustomException
 from src.DiamondPricePrediction.logger import logging
 from src.DiamondPricePrediction.utils.utils import load_object
 
-os.chdir('/Users/deepjyotibhattacharjee/Developer/Diamond_Price_Prediction')
+# os.chdir('/Users/deepjyotibhattacharjee/Developer/Diamond_Price_Prediction')
 
 class PredictPipeline:
     def __init__(self):
@@ -13,8 +13,8 @@ class PredictPipeline:
 
     def predict(self,features):
         try:
-            preprocessor_path = os.path.join("artifacts","preprocessor.pkl")
-            model_path = os.path.join("artifacts","model.pkl")
+            preprocessor_path = os.path.join("/Users/deepjyotibhattacharjee/Developer/Diamond_Price_Prediction/artifacts","preprocessor.pkl")
+            model_path = os.path.join("/Users/deepjyotibhattacharjee/Developer/Diamond_Price_Prediction/artifacts","model.pkl")
 
             preprocessor = load_object(preprocessor_path)
             model =  load_object(model_path)
