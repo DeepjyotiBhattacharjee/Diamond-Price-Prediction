@@ -15,7 +15,7 @@ from sklearn.preprocessing import StandardScaler, OrdinalEncoder
 from src.DiamondPricePrediction.utils.utils import save_object, evaluate_model
 from sklearn.linear_model import LinearRegression,Lasso,Ridge,ElasticNet
 
-os.chdir('/Users/deepjyotibhattacharjee/Developer/Diamond_Price_Prediction')
+# os.chdir('/Users/deepjyotibhattacharjee/Developer/Diamond_Price_Prediction')
 
 @dataclass
 class ModelTrainerConfig:
