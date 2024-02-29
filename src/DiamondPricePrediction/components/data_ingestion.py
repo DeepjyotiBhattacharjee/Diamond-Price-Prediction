@@ -9,7 +9,7 @@ from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 from pathlib import Path
 
-os.chdir('/Users/deepjyotibhattacharjee/Developer/Diamond_Price_Prediction')
+# os.chdir('/Users/deepjyotibhattacharjee/Developer/Diamond_Price_Prediction')
 print("cwd == ",os.getcwd())
 
 
@@ -30,6 +30,8 @@ class DataIngestion:
         try:
 
             data = pd.read_csv(Path("notebooks/data","gemstone.csv"))
+            print("data path is okay.")
+            print(data.head())
             logging.info("Read the dataset as a dataframe.")
 
             print(os.path.join(self.ingestion_config.raw_data_path))
